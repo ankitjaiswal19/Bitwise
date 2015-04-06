@@ -1,0 +1,143 @@
+.PheadCss
+{
+    background-image: url("../images/circle.png");
+    height: 235px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    color: blue;
+    border: 3px;
+    font-size: 2em;
+  }
+.PbodyC
+{
+    border: 2px solid pink;
+    border-radius: 20px;
+
+}
+.PtitleCss
+{
+    margin-left: 150px;
+
+}
+.PlableC {
+    border: 2px solid pink;
+    border-radius: 7px;
+    text-align: center;
+    width: 200px;
+    font-size: 26px;
+}
+.PquesC{
+    border: 2px solid pink;
+    border-radius: 7px;
+    text-align: center;
+    width: 200px;
+    font-size: 26px;
+}
+.PDateC
+{
+    margin-left: 20px;
+    font-size: 15px;
+}
+.PTimeC
+{
+    font-size: 15px;
+}
+.PostTextC
+{
+    margin-left: 120px;
+    border: 2px solid pink;
+    margin-right: 120px;
+
+}
+.ReplyFormCss
+{
+    margin-left: 120px;
+    border: 2px solid pink;
+    margin-right: 120px;
+
+
+}
+.ReplyText{
+    margin-left: 150px;
+    width: 393px;
+    height: 191px;
+
+}
+.TextC
+{
+
+}
+.postdesc
+{
+    margin-left: 50px;
+}
+.TextComment
+{
+    margin-left: 100px;
+
+}
+.TextCommentC
+{
+    margin-left: 150px;
+}
+.TextCommCR
+{
+    margin-left: 150px;
+}
+.btnrply
+{
+    margin: 30px;
+    margin-left: 50%;
+}
+.HMainCss
+{
+    width: 98%;
+    margin-left: 1%;
+
+}
+#Htitle
+{
+    color: #ffffff;
+    margin-left: 40px;
+}
+.menu {
+
+    position: fixed;
+    background-image:url("../images/Untitled.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;;
+    height: 30px;
+    left: 1%;
+    top: 0;
+    width: 97%;
+    align-items: center;
+    margin-left: .5%;
+    color: #ffffff;
+
+
+
+
+}
+#menuItem1
+{
+    /*float: left;*/
+    float: right;
+    margin-right: 20px;
+}
+#menuItem2
+{
+    float: right;
+    margin-right: 30px;
+}
+#menuItem3
+{
+    float: right;
+    margin-right: 50px;
+    color: #ffffff;
+}
+#HomeP{
+    float: right;
+    margin-right: 40px;
+}

@@ -1,0 +1,53 @@
+
+.postidcss
+{
+    border: 2px solid pink;
+    border-radius: 20px;
+    height: 300px;
+    width: 1000px;
+    float: left;
+}
+
+.categorycss
+{
+    margin-left: 20px;
+
+}
+
+.quescss
+{
+    margin-left: 20px;
+
+}
+
+.tagcss
+{
+    margin-left: 20px;
+
+}
+
+.usernamecss
+{
+
+    margin-right: 30px;
+    float: right;
+    width: 10%
+
+}
+
+.datecss
+{
+
+    margin-right: 20px;
+    float: right;
+    width: 5%
+
+
+}
+
+.timecss{
+    margin-right: 10px;
+    float: right;
+    width: 5%
+
+}
