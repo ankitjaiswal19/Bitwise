@@ -15,9 +15,6 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-
-
-
 @Entity
 @Table(name = "Comments123")
 @NamedQueries({
@@ -27,7 +24,6 @@ import javax.persistence.TemporalType;
      @NamedQuery(name="Comment.findByReply",
             query="SELECT c FROM Comment c WHERE c.reply = :reply"),
 })
-
 
 public class Comment {
 	@Id
