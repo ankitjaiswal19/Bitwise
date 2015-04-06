@@ -28,6 +28,7 @@ import javax.persistence.TemporalType;
             query="SELECT c FROM Comment c WHERE c.reply = :reply"),
 })
 
+
 public class Comment {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
