@@ -69,7 +69,7 @@
                         </tr>
                         <tr>
                         	<td>
-                        		<a href="./createPost?email="+${user.getEmail()}>Create Post</a>
+                        		<a href="./createPost?email=${user.getEmail()}">Create Post</a>
                         	</td>
                         	<td>
                         	</td>
