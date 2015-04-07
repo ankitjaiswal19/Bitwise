@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@page import="com.forum.entities.Post"%>
+<%@page import="java.util.ListIterator"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+	
 <!DOCTYPE html>
 <html>
 <head>
@@ -63,6 +67,13 @@
                                 <div id="uemail" >${user.getEmail()}</div>
                             </td>
                         </tr>
+                        <tr>
+                        	<td>
+                        		<a href="./createPost?email="+${user.getEmail()}>Create Post</a>
+                        	</td>
+                        	<td>
+                        	</td>
+                        </tr>
                     </table>
                 </div>
 
@@ -77,6 +88,8 @@
 
         <div id="PostContainer" class="PostContainerCss">
             <div id="post1" class="PostTextC">
+            <c:if test="${not empty postList}">
+				<c:forEach var="post" items="${postList}">
                 <div id="postid" class="postidcss">
                     <div id="quesd" class="quescss">
                         <br>
@@ -98,7 +111,8 @@
                         <label id="username">User Name</label>
                     </div>
                 </div>
-
+                </c:forEach>
+					</c:if>
             </div>
         </div>
     </div>

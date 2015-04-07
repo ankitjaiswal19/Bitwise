@@ -77,8 +77,9 @@ public class UserController {
 			User user = userService.findByEmail(email);
 			if (user.getPassword().equals(pass)) {
 				mav = new ModelAndView("userprofile");
-				System.out.println(postService.findMyPost(user));
-				mav.addObject("listPost", postService.findMyPost(user));
+				//System.out.println(postService.findMyPost(user));
+				mav.addObject("user", user);
+				mav.addObject("postList", postService.findMyPost(user));
 			} else {
 				mav = new ModelAndView("ErrorPage");
 				mav.addObject("message", "invalid user");
