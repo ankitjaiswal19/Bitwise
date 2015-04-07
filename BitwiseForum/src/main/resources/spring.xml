@@ -20,9 +20,9 @@ http://www.springframework.org/schema/tx/spring-tx.xsd">
       class="org.springframework.jdbc.datasource.DriverManagerDataSource">
       <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
       <property name="url" value="jdbc:oracle:thin:@localhost:1521:XE"/>
-      <property name="username" value="Ankit"/>
-      <property name="password" value="niit"/>
-    <!--   <property name="hibernate.enable_lazy_load_no_trans" value="true"/> -->
+      <property name="username" value="hr"/>
+      <property name="password" value="priya"/>
+   
    </bean>
  
     <bean id="entityManagerFactory"
