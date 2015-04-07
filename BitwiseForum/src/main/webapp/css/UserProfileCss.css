@@ -1,11 +1,14 @@
-
 .postidcss
 {
     border: 2px solid pink;
     border-radius: 20px;
-    height: 300px;
-    width: 1000px;
+    height: 25%;
+    width: 97%;
+    margin-left: 10px;
+    margin-right: 50px;
+    margin-top: 10px;
     float: left;
+
 }
 
 .categorycss
@@ -51,3 +54,10 @@
     width: 5%
 
 }
+/*.PostContainerCss
+{
+    border: 2px solid pink;
+    border-radius: 20px;
+    height: 500px;
+}*/
+

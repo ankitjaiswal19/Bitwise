@@ -5,9 +5,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
-    color: blue;
-    border: 3px;
     font-size: 2em;
+
   }
 .PbodyC
 {
@@ -45,9 +44,12 @@
 }
 .PostTextC
 {
-    margin-left: 120px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
     border: 2px solid pink;
-    margin-right: 120px;
+    border-radius: 20px;
+    height: 500px;
 
 }
 .ReplyFormCss
@@ -107,16 +109,14 @@
     background-image:url("../images/Untitled.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;;
-    height: 30px;
+    background-size: 100% auto;
+    height: 3%;
     left: 1%;
     top: 0;
     width: 97%;
-    align-items: center;
+    /*align-items: center;*/
     margin-left: .5%;
     color: #ffffff;
-
-
 
 
 }
@@ -125,6 +125,7 @@
     /*float: left;*/
     float: right;
     margin-right: 20px;
+
 }
 #menuItem2
 {
@@ -140,4 +141,6 @@
 #HomeP{
     float: right;
     margin-right: 40px;
+
+
 }
