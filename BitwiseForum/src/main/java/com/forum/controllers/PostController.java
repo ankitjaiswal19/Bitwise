@@ -22,13 +22,13 @@ public class PostController {
     private PostService postService;
     
 
-	@RequestMapping(value="/home", method= RequestMethod.GET)
-	public ModelAndView openHome()
-	{
-		 ModelAndView model=new ModelAndView("Home");
-		 return model;
-	}
-	
+//	@RequestMapping(value="/home", method= RequestMethod.GET)
+//	public ModelAndView openHome()
+//	{
+//		 ModelAndView model=new ModelAndView("Home");
+//		 return model;
+//	}
+//	
 	/*@RequestMapping(value="/login", method= RequestMethod.POST)
 	public ModelAndView openLogin(
 			@RequestParam(value="uname") String username,

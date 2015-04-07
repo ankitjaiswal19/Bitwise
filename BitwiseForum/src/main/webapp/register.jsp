@@ -16,13 +16,13 @@
             <input type="search"  placeholder="Search" id="search">
         </div>
         <div id="menuItem1">
-            <a href="signup"> Sign Up</a>
+            <a href="register"> Sign Up</a>
         </div>
         <div id="menuItem2">
             <a href="login">Login</a>
         </div>
         <div id="HomeP">
-            <a href="HomePage.html">Home</a>
+            <a href="home">Home</a>
         </div>
         <div id="Htitle">
             Bitwise Solution
@@ -34,11 +34,11 @@
 
     <div id="Hbody" class="PbodyC">
         <h3 align="center">REGISTRATION </h3>
-    <form id="myForm" method="post" action="Login_Reg" >
+    <form id="myForm" method="post" action="getRegistered" >
     <table align="center" id="tbl">
         <tr>
             <td>Name<span class="errorMsg">*</span></td>
-            <td><input type="text" id="name" name="name"/></td>
+            <td><input type="text" id="name" name="username"/></td>
             <td id="nameError" class="errorMsg"> </td></tr>
         <tr>
             <td>Email<span class="errorMsg">*</span></td>
@@ -50,7 +50,7 @@
             <td id="passwordError" class="errorMsg"> </td></tr>
         <tr>
             <td>Verify Password<span class="errorMsg">*</span></td>
-            <td><input type="password" id="pwVerified" name="pwVerified" /></td>
+            <td><input type="password" id="pwVerified" name="confirmPass" /></td>
             <td id="pwVerifiedError" class="errorMsg"> </td></tr>
         <tr>
             <td> </td>

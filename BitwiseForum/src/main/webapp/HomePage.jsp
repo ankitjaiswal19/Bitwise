@@ -44,13 +44,13 @@
 				<input type="search" placeholder="Search" id="search">
 			</div>
 			<div id="menuItem1">
-				<a href="register.html"> Sign Up</a>
+				<a href="register"> Sign Up</a>
 			</div>
 			<div id="menuItem2">
 				<a href="login">Login</a>
 			</div>
 			<div id="HomeP">
-				<a href="HomePage.html">Home</a>
+				<a href="home">Home</a>
 			</div>
 			<div id="Htitle">Bitwise Solution</div>
 		</div>

@@ -8,25 +8,19 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class TestController {
-	@RequestMapping(value="/",method=RequestMethod.GET)
-	public ModelAndView hello()
-	{
-		ModelAndView mav=new ModelAndView("HomePage");
-//		mav.addObject("title", "new page");
-		return mav;
-	}
 	
 	
 	
-	@RequestMapping("/login2")
-	public ModelAndView hello2()
-	{
-		ModelAndView mav=new ModelAndView("hello");
-		mav.addObject("title", "21852852852828");
-		return mav;
-	}
-	
-	
+//	
+//	@RequestMapping("/login2")
+//	public ModelAndView hello2()
+//	{
+//		ModelAndView mav=new ModelAndView("hello");
+//		mav.addObject("title", "21852852852828");
+//		return mav;
+//	}
+//	
+//	
 	
 	
 /*		this code has been moved to userController*/
