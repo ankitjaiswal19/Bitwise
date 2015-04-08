@@ -1,5 +1,7 @@
 package com.forum.DAO;
 
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -10,6 +12,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.forum.entities.Post;
+import com.forum.entities.Tags;
 import com.forum.entities.User;
 
 @Repository
@@ -21,6 +24,15 @@ public class PostDAO {
 	@Transactional
 	public void addPost(Post post) {
 		em.persist(post);
+		Collection<Tags> tags= post.getTags();
+		for (Iterator iterator = tags.iterator(); iterator.hasNext();) {
+			Tags tags2 = (Tags) iterator.next();
+			tags2.addPost(post);
+			em.merge(tags2);
+		}
+		
+		em.flush();
+		System.out.println(post.getTags());
 	}
 	@Transactional
 	public List<Post> findbysearch(String search) {
