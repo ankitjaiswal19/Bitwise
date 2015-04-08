@@ -2,6 +2,7 @@ package com.forum.controllers;
 
 import java.util.Collection;
 import java.util.Date;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -64,26 +65,25 @@ public class PostController {
     }
     @RequestMapping(value="/addpost", method= RequestMethod.POST)
 	public ModelAndView getPostInfo(
-			@RequestParam(value="tags") Collection<Tags> tags,
-			@RequestParam(value="id") int id,
-			@RequestParam(value="title") String post_title,
-			@RequestParam(value="owner") User post_owner,
-		  	@RequestParam(value="postText") String post_text,
-			@RequestParam(value="postdate") Date post_date)
-	       
+			@RequestParam Map<String, Object> params)
             {
     		 Post post= new Post(); 
-    		 post.setTags(null);
-    		 post.setPostId(id);
-    		 post.setTitle(post_title);
-    		 post.setOwner(post_owner);
-    		 post.setPostText(post_text);
+    		 if(params.get("tag")!=null)
+    		 post.setTags((Collection<Tags>)params.get("tag"));
+    		 else{
+    			 post.setTags(null);
+    		 }
+//    		 post.setPostId(id);
+    		 post.setTitle((String)params.get("postTitle"));
+    		 post.setOwner(userService.findByEmail((String)params.get("email")));
+    		 post.setPostText((String)params.get("postText"));
     		 post.setPostDate(new Date());
-    		 
-    		 ModelAndView model = new ModelAndView("home");
-
+    		 System.out.println(post);
     		 postService.addPostService(post);
-    	    	System.out.println("posted");
+    		 ModelAndView model = new ModelAndView("HomePage");
+
+    		 
+//    	    	System.out.println("posted");
     	    	//ModelAndView model=null;
     			return model;
 		    

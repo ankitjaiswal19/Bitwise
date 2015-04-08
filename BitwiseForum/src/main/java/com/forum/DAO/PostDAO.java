@@ -25,6 +25,7 @@ public class PostDAO {
 	public void addPost(Post post) {
 		em.persist(post);
 		Collection<Tags> tags= post.getTags();
+		if(tags!=null)
 		for (Iterator iterator = tags.iterator(); iterator.hasNext();) {
 			Tags tags2 = (Tags) iterator.next();
 			tags2.addPost(post);
