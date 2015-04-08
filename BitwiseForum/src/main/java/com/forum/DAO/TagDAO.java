@@ -1,10 +1,11 @@
 package com.forum.DAO;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
-import org.omg.CORBA.PUBLIC_MEMBER;
 import org.springframework.stereotype.Repository;
 
 import com.forum.entities.Tags;
@@ -22,5 +23,10 @@ public class TagDAO {
 	{
 		TypedQuery<Tags> query=em.createNamedQuery("Tags.findByName", Tags.class).setParameter("tagName", name);
 		return query.getSingleResult(); 
+	}
+	public List<Tags> findAllTags()
+	{
+		TypedQuery<Tags> query=em.createNamedQuery("Tags.findAllTags", Tags.class);
+		return query.getResultList(); 
 	}
 }

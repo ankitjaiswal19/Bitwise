@@ -15,13 +15,10 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "Tags")
-
-
 @NamedQueries({
-	 @NamedQuery(name="Tags.findByName",
-            query="SELECT t FROM Tags t WHERE t.tagName = :tagName"),
-})
-
+		@NamedQuery(name = "Tags.findByName", query = "SELECT t FROM Tags t WHERE t.tagName = :tagName"),
+		@NamedQuery(name = "Tags.findAllTags", query = "SELECT t FROM Tags t"),
+		})
 public class Tags {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

@@ -14,14 +14,18 @@ import com.forum.entities.Post;
 import com.forum.entities.Tags;
 import com.forum.entities.User;
 import com.forum.service.PostService;
+import com.forum.service.TagsService;
+import com.forum.service.UserService;
 
 @Controller
 public class PostController {
 
     @Autowired
     private PostService postService;
-    
-
+    @Autowired
+    private UserService userService;
+    @Autowired
+    private TagsService tagsService;
 //	@RequestMapping(value="/home", method= RequestMethod.GET)
 //	public ModelAndView openHome()
 //	{
@@ -43,7 +47,21 @@ public class PostController {
 	    }
 	*/
 	
-    
+    @RequestMapping(value="/createPost",method=RequestMethod.GET)
+    public ModelAndView getCreatePost(@RequestParam(value="email") String email)
+    {
+    	ModelAndView modelAndView=null;
+    	if(email!=null){
+    	User user=userService.findByEmail(email);
+    	modelAndView =new ModelAndView("CreatePost");
+    	modelAndView.addObject("user", user);
+    	modelAndView.addObject("tagsList", tagsService.findAllTags());
+    	}
+    	else {
+			modelAndView=new ModelAndView("LoginPage");
+		}
+    	return modelAndView;
+    }
     @RequestMapping(value="/addpost", method= RequestMethod.POST)
 	public ModelAndView getPostInfo(
 			@RequestParam(value="tags") Collection<Tags> tags,

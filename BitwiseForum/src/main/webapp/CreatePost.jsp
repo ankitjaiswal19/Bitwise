@@ -1,5 +1,7 @@
+<%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <!-- saved from url=(0071)http://localhost:63342/JavaProgram/ForumnProject/HomePage/HomePage.html -->
 <html><head lang="en"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -50,11 +52,11 @@
                 <label id="tag" >Tag</label>
                 <select id="List">
                     <option value=""><h1>Select List</h1></option>
-                    <option value="Java">Java</option>
-                    <option value="JavaScript">JavaScript</option>
-                    <option value="c#">C#</option>
-                    <option value="c++">C++</option>
-                    <option value="c">C</option>
+                    <c:if test="${not empty tagsList}">
+				<c:forEach var="tag" items="${tagsList}">
+                    <option value="${tag.getTagName()}">${tag.getTagName()}</option>
+                    </c:forEach>
+                    </c:if>
                 </select>
                 <input id="add" type="button" value="AddMoreTagFromList" onclick="AddMoreTag()">
                 <input id="del" type="button" value="delete"  onclick="delName()">
@@ -83,12 +85,12 @@
 
 
             <div id="dated" class="datecss">
-                <label id="datelabel" >Date</label>
+                <label id="datelabel" ><%=new Date().toString() %></label>
             </div>
 
             <div id="usernamed" class="usernamecss">
 
-                <label id="username" >User Name</label>
+                <label id="username" >${user.getName()}</label>
             </div>
                 <br>
                 <br>

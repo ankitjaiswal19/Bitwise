@@ -1,5 +1,7 @@
 package com.forum.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -21,5 +23,9 @@ public class TagsService {
 	}
 	public Tags findByName(String name) {
 		return tagDAO.findByName(name);
+	}
+	public List<Tags> findAllTags()
+	{
+		return tagDAO.findAllTags();
 	}
 }
