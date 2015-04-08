@@ -54,10 +54,13 @@
     width: 5%
 
 }
-/*.PostContainerCss
+.PostContainerCss
 {
-    border: 2px solid pink;
-    border-radius: 20px;
-    height: 500px;
-}*/
-
+   position: relative;
+   height: 100%;
+}
+#body
+	{
+	height: 100%;
+	}
+}

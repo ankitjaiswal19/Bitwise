@@ -68,9 +68,7 @@
                             </td>
                         </tr>
                         <tr>
-                        	<td>
-                        		<a href="./createPost?email=${user.getEmail()}">Create Post</a>
-                        	</td>
+                        	
                         	<td>
                         	</td>
                         </tr>
@@ -83,9 +81,10 @@
     </div>
     <br>
 
-    <div id="post" style="clear: both"><br>
+    <div id="post" style="clear: both">                   		
         <label>Post Are:</label>
-
+		<a href="./createPost?email=${user.getEmail()}" style="margin-left: 75%;">Create Post</a>
+                      	
         <div id="PostContainer" class="PostContainerCss">
             <div id="post1" class="PostTextC">
             <c:if test="${not empty postList}">
