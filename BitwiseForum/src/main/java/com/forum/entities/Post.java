@@ -1,6 +1,7 @@
 package com.forum.entities;
 
 import java.sql.Time;
+import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashSet;
@@ -39,7 +40,7 @@ public class Post {
 	@JoinColumn(name = "owner")
 	private User owner;
 	private String postText;
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date postDate;
 	
 
@@ -143,6 +144,7 @@ public class Post {
 	}
 
 	public Date getPostDate() {
+		
 		return postDate;
 	}
 

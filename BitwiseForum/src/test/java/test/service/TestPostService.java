@@ -1,5 +1,6 @@
 package test.service;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -38,7 +39,11 @@ public class TestPostService {
 //		post.setTitle("my title");
 //		
 //		postService.addPostService(post);
-		System.out.println(postService.findMyPost(userService.findByEmail("ankit@gmail.com")));
+		
+		
+		
+		
+//		System.out.println(postService.findMyPost(userService.findByEmail("ankit@gmail.com")));
 	}
 
 }

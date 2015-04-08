@@ -92,7 +92,7 @@
                 <div id="postid" class="postidcss">
                     <div id="quesd" class="quescss">
                         <br>
-                        <label id="queslabel">Question</label>
+                        <label id="queslabel"><a href="">${post.getTitle()}</a></label>
                         <br>
                     </div>
                     <div id="tagd" class="tagcss">
@@ -104,7 +104,7 @@
                         <label id="timelabel">Time</label>
                     </div>
                     <div id="dated" class="datecss">
-                        <label id="datelabel">Date</label>
+                        <label id="datelabel">${post.getPostDate().getDate()}/${post.getPostDate().getMonth()}/${post.getPostDate().getYear()}</label>
                     </div>
                     <div id="usernamed" class="usernamecss">
                         <label id="username">User Name</label>
