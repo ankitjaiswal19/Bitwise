@@ -9,8 +9,8 @@
 <body>
 <div id="header">
 
-    <img src="./images/finalsory.jpg" height="504" width="1024"/>
-   <center> <h3>PAGE CANNOT BE DISPLAYED,BACK TO HOME PAGE..<br>We regret the inconvenience caused..!!  &nbsp;&nbsp;<a HREF=""><br>TAKE ME HOME..!!!!</a> </h3></center>
+    <img src="./images/layout_001.jpg" height="40%" width="100%"/>
+    <center> <h3>PAGE CANNOT BE DISPLAYED,BACK TO HOME PAGE..<br>We regret the inconvenience caused..!!  <a HREF=""><br>TAKE ME HOME..!!!!</a> </h3></center>
 
 </div>
 </body>
