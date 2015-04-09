@@ -83,7 +83,7 @@
 					<div id="postid" class="postidcss">
 
 						<div id="quesd" class="quescss">
-							<label id="queslabel"><a hreaf="">${post.getTitle()}</a></label>
+							<label id="queslabel"><a href="">${post.getTitle()}</a></label>
 						</div>
 						<br>
 						<div id="tagd" class="tagcss">
@@ -101,7 +101,7 @@
 
 						<div id="usernamed" class="usernamecss">
 
-							<label id="username"><a hreaf="">${post.getOwner().getName()}</a></label>
+							<label id="username"><a href="">${post.getOwner().getName()}</a></label>
 						</div>
 
 					</div>

@@ -20,6 +20,7 @@
 .quescss
 {
     margin-left: 20px;
+    
 
 }
 
@@ -32,26 +33,29 @@
 .usernamecss
 {
 
-    margin-right: 30px;
+    margin-right: 3%;
     float: right;
-    width: 10%
+    width: 10%;
+    margin-bottom:1% auto;
+    padding-bottom:2%;
+    
 
 }
 
 .datecss
 {
 
-    margin-right: 20px;
+   
+    margin-right: 6% auto;
     float: right;
-    width: 5%
-
+    width: 12%
 
 }
 
 .timecss{
-    margin-right: 10px;
+     margin-right: 3% auto ;
     float: right;
-    width: 5%
+    width: 20%;
 
 }
 .PostContainerCss

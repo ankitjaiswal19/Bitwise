@@ -16,7 +16,8 @@
     border: 2px solid pink;
     border-radius: 20px;
     margin: 1% 1% auto;
-    height: 550px;
+    height: 1000px;
+    position: absolute;
 }
 .HLeftCss
 {
@@ -34,7 +35,7 @@
     border: 2px solid pink;
     border-radius: 20px;
     margin: 1% 1% auto;
-    height: 500px;
+    height: auto;
     /*text-align: center;*/
 
 }
@@ -92,6 +93,7 @@
     width: 95%;
     float: left;
     margin-left: 3%;
+    margin-bottom: 3%;
     
 
 }
@@ -119,7 +121,9 @@
 
     margin-right: 4% auto;
     float: right;
-    width: 15%
+    width: 15%;
+    margin-bottom: 3%;
+   
 
 }
 
@@ -128,7 +132,7 @@
 
     margin-right: 6% auto;
     float: right;
-    width: 12%
+    width: 12%;
 
 
 }
@@ -137,7 +141,8 @@
 {
     margin-right: 3%;
     float: right;
-    width: 30%
+    width: 30%;
+     margin-bottom: 3%;
 
 }
 #TagCategories
@@ -154,4 +159,10 @@
 {
     color: #ffffff;
     margin-left: 40px;
+}
+#postlist
+{
+    margin-bottom:3% auto;
+    padding-bottom:2%;
+    margin-top: 2% auto;
 }
