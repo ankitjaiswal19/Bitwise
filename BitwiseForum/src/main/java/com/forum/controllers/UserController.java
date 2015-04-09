@@ -4,9 +4,11 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.forum.entities.User;
@@ -14,6 +16,7 @@ import com.forum.service.PostService;
 import com.forum.service.UserService;
 
 @Controller
+@SessionAttributes("user")
 public class UserController {
 	@Autowired
 	UserService userService;
@@ -38,8 +41,9 @@ public class UserController {
 	}
 
 	@RequestMapping(value = "/getRegistered")
-	public ModelAndView welcome(@RequestParam Map<String, String> params) {
+	public ModelAndView welcome(@RequestParam Map<String, String> params,@RequestParam Model model) {
 		ModelAndView mav;
+		System.out.println("model="+model);
 		String uname = params.get("username");
 		String pwd = params.get("password");
 		String cnfpwd = params.get("confirmPass");
