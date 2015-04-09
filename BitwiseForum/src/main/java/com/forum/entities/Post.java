@@ -2,6 +2,7 @@ package com.forum.entities;
 
 import java.sql.Time;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashSet;
@@ -54,7 +55,7 @@ public class Post {
 
 	@ManyToMany(mappedBy="post")
 //	@JoinColumn(name="tags")
-	private Collection<Tags> tags =new HashSet<Tags>();
+	private Collection<Tags> tags =new ArrayList<Tags>();
 	
 	public Post() {
 	}

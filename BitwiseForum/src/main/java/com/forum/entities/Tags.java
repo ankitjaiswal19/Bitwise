@@ -1,5 +1,6 @@
 package com.forum.entities;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 
@@ -27,7 +28,7 @@ public class Tags {
 	private String tagName;
 
 	@ManyToMany
-	private Collection<Post> post = new HashSet<Post>();
+	private Collection<Post> post = new ArrayList<Post>();
 
 	public int getTagId() {
 		return tagId;
