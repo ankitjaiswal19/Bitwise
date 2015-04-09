@@ -14,22 +14,24 @@ import com.forum.entities.Reply;
 
 @Repository
 public class CommentDAO {
-	
+
 	@PersistenceContext
-    private EntityManager em;
-	
+	private EntityManager em;
+
 	@Transactional
-	public void addComment(Comment comment)
-	{
-		em.persist(comment);	
+	public void addComment(Comment comment) {
+		em.persist(comment);
 	}
+
 	@Transactional
-	public List<Comment> findByPost(Post post)
-	{
-		return em.createNamedQuery("Comment.findByPost").setParameter("post", post).getResultList();
+	public List<Comment> findByPost(Post post) {
+		return em.createNamedQuery("Comment.findByPost")
+				.setParameter("post", post).getResultList();
 	}
+
 	public List<Comment> findByReply(Reply reply) {
-		// 
-		return em.createNamedQuery("Comment.findByReply").setParameter("reply", reply).getResultList();
+		//
+		return em.createNamedQuery("Comment.findByReply")
+				.setParameter("reply", reply).getResultList();
 	}
 }
