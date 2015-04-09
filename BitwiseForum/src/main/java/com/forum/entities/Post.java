@@ -62,7 +62,7 @@ public class Post {
 	
 	public void addtag(Tags t)
 	{
-		t.addPost(this);
+		tags.add(t);
 	}
 
 //	public Comment createComment() {

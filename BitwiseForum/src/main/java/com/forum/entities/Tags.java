@@ -58,10 +58,10 @@ public class Tags {
 		this.post = post;
 	}
 
-	@Override
-	public String toString() {
-		return "Tags [tagId=" + tagId + ", tagName=" + tagName + ", post="
-				+ post + "]";
-	}
+//	@Override
+//	public String toString() {
+//		return "Tags [tagId=" + tagId + ", tagName=" + tagName + ", post="
+//				+ post + "]";
+//	}
 
 }

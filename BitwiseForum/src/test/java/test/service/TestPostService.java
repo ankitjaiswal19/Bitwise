@@ -32,13 +32,15 @@ public class TestPostService {
 	CommentService commentService;
 	@Test
 	public void test() {
-//		Post post=new Post();
-//		post.setOwner(userService.findByEmail("ankit@gmail.com"));
-//		post.setPostDate(new Date());
-//		post.setPostText("some thing");
-//		post.setTitle("my title");
-//		
-//		postService.addPostService(post);
+		Post post=new Post();
+		post.setOwner(userService.findByEmail("abc1@abc.com"));
+		post.setPostDate(new Date());
+		post.setPostText("some thing");
+		post.setTitle("my title");
+		post.addtag(tagsService.findByName("Java"));
+		post.addtag(tagsService.findByName("javaScript"));
+		System.out.println(post);
+		postService.addPostService(post);
 		
 		
 		
