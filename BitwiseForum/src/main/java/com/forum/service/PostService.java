@@ -30,9 +30,9 @@ public class PostService {
 		return postDAO.findbysearch(topic);
 
 	}
-	public List<Post> allPost()
+	public List<Post> findAllPost()
 	{
-		return postDAO.allPost();
+		return postDAO.findAllPost();
 	}
 	public List<Post> findMyPost(User user) {
 		return postDAO.myPost(user);

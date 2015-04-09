@@ -22,6 +22,7 @@ public class UserController {
 	{
 		ModelAndView mav=new ModelAndView("HomePage");
 //		mav.addObject("title", "new page");
+		mav.addObject("postList", postService.findAllPost());
 		return mav;
 	}
 	@RequestMapping(value="/home",method=RequestMethod.GET)

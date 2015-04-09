@@ -48,7 +48,7 @@ public class PostDAO {
 		Post p=em.find(Post.class, id);
 		return p;
 	}
-	public List<Post> allPost()
+	public List<Post> findAllPost()
 	{
 		TypedQuery<Post> query2 = em
 				.createNamedQuery("allPost", Post.class);
