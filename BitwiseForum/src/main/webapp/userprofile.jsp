@@ -101,13 +101,13 @@
                         <br>
                     </div>
                     <div id="timed" class="timecss">
-                        <label id="timelabel">Time</label>
+                        <label id="timelabel">${post.getPostDate()}</label>
                     </div>
                     <div id="dated" class="datecss">
-                        <label id="datelabel">${post.getPostDate().getDate()}/${post.getPostDate().getMonth()}/${post.getPostDate().getYear()}</label>
+                        <label id="datelabel"></label>
                     </div>
                     <div id="usernamed" class="usernamecss">
-                        <label id="username">User Name</label>
+                        <label id="username"><a href="">${post.getOwner().getName()}</a></label>
                     </div>
                 </div>
                 </c:forEach>
