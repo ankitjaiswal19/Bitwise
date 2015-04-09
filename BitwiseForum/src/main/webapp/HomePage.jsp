@@ -60,9 +60,15 @@
 		<div id="Hbody" class="PbodyC">
 
 			<div id="HLeft" class="HLeftCss">
-				<br> <br>
-				<div id="TagCategories">Categories</div>
+				<br><h4 align="center">Categories</h4>  <br>
+				
+				<c:if test="${not empty tagsList}">
+								<c:forEach var="tag" items="${tagsList}">
+			<div id="TagCategories">
+				<a href="">${tag.getTagName()}</a>							
 			</div>
+				</c:forEach>
+							</c:if></div>
 			<div id="HRight" class=" HRightCss">
 				<br> Recent Post <br> <br>
 

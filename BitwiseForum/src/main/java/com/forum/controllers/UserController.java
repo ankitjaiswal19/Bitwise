@@ -14,18 +14,23 @@ import org.springframework.web.servlet.ModelAndView;
 import com.forum.entities.User;
 import com.forum.service.PostService;
 import com.forum.service.UserService;
+import com.forum.service.TagsService;
 
 @Controller
 @SessionAttributes("user")
 public class UserController {
 	@Autowired
 	UserService userService;
+	@Autowired
+	TagsService tagsService;
+	
 	@RequestMapping(value="/",method=RequestMethod.GET)
 	public ModelAndView welcome()
 	{
 		ModelAndView mav=new ModelAndView("HomePage");
 //		mav.addObject("title", "new page");
 		mav.addObject("postList", postService.findAllPost());
+		mav.addObject("tagsList", tagsService.findAllTags());
 		return mav;
 	}
 	@RequestMapping(value="/home",method=RequestMethod.GET)
