@@ -11,7 +11,7 @@
 <meta charset="UTF-8">
 <title></title>
 <script src="./js/jquery-1.11.2.js"></script>
-<script>
+<!-- <script>
         $(document).ready(function()
         {
             $("#TextComment").hide();
@@ -32,7 +32,7 @@
             });
         });
 
-    </script>
+    </script> -->
 <link rel="stylesheet" type="text/css" href="./css/Home.css">
 </head>
 <body>
@@ -83,7 +83,7 @@
 					<div id="postid" class="postidcss">
 
 						<div id="quesd" class="quescss">
-							<label id="queslabel">${post.getTitle()}</label>
+							<label id="queslabel"><a hreaf="">${post.getTitle()}</a></label>
 						</div>
 						<br>
 						<div id="tagd" class="tagcss">
@@ -91,17 +91,17 @@
 						</div>
 
 						<div id="timed" class="timecss">
-							<label id="timelabel">             </label>
+							<label id="timelabel"> ${post.getPostDate() }</label>
 						</div>
 
 
 						<div id="dated" class="datecss">
-							<label id="datelabel">${post.getPostDate() }</label>
+							<label id="datelabel"></label>
 						</div>
 
 						<div id="usernamed" class="usernamecss">
 
-							<label id="username">${post.getOwner().getName()}</label>
+							<label id="username"><a hreaf="">${post.getOwner().getName()}</a></label>
 						</div>
 
 					</div>

@@ -88,26 +88,28 @@
 {
     border: 2px solid pink;
     border-radius: 20px;
-    height: 75px;
+    height: 25%;
     width: 95%;
     float: left;
-    margin-left: 20px;
+    margin-left: 3%;
+    
 
 }
 .categorycss
 {
-    margin-left: 20px;
+    margin-left: 3%;
 
 }
 
 .quescss
 {
-    margin-left: 20px;
+    margin-left: 3%;
+    margin-top: 3%
 
 }
 .tagcss
 {
-    margin-left: 20px;
+    margin-left: 3%;
     float: left;
 
 }
@@ -115,7 +117,7 @@
 .usernamecss
 {
 
-    margin-right: 30px;
+    margin-right: 4% auto;
     float: right;
     width: 15%
 
@@ -124,18 +126,18 @@
 .datecss
 {
 
-    margin-right: 20px;
+    margin-right: 6% auto;
     float: right;
-    width: 5%
+    width: 12%
 
 
 }
 
 .timecss
 {
-    margin-right: 10px;
+    margin-right: 3%;
     float: right;
-    width: 5%
+    width: 30%
 
 }
 #TagCategories
