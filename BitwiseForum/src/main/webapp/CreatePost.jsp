@@ -66,6 +66,8 @@
 								<th><label> Delete </label></th>
 								<th><label id="lab"> Name </label></th>
 							</tr>
+							<tr id="TagaData">
+							</tr>
 						</table>
 						<br> <br> <br>
 					</div>
