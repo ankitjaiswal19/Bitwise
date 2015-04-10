@@ -62,12 +62,11 @@
 							value="delete" onclick="delName()">
 						<table id="nametable" border="1"
 							style="margin-left: 5px; float: right">
-							<tr>
+							 <tr>
 								<th><label> Delete </label></th>
-								<th><label id="lab"> Name </label></th>
-							</tr>
-							<tr id="TagaData">
-							</tr>
+						        <th><label id="lab"> Name </label></th>
+							</tr> 
+							
 						</table>
 						<br> <br> <br>
 					</div>
