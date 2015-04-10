@@ -71,7 +71,7 @@
 					</div>
 
 					<div id="timed" class="timecss">
-						<label id="timelabel">Time</label>
+						<label id="timelabel"></label>
 					</div>
 
 
