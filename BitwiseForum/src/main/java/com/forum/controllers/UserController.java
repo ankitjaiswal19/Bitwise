@@ -46,9 +46,9 @@ public class UserController {
 	}
 
 	@RequestMapping(value = "/getRegistered")
-	public ModelAndView welcome(@RequestParam Map<String, String> params,@RequestParam Model model) {
+	public ModelAndView welcome(@RequestParam Map<String, String> params) {
 		ModelAndView mav;
-		System.out.println("model="+model);
+	//	System.out.println("model="+model);
 		String uname = params.get("username");
 		String pwd = params.get("password");
 		String cnfpwd = params.get("confirmPass");
