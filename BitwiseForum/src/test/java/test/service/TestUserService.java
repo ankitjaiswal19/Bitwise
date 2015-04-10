@@ -21,7 +21,6 @@ public class TestUserService {
 		user.setName("Ankit2");
 		user.setEmail("abc1@abc.com");
 		user.setPassword("abc2");
-		
 		service.addUser(user);
 	}
 
