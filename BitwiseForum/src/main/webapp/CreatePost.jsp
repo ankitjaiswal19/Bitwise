@@ -91,9 +91,8 @@
 					</div>
 					<br> <br>
 					<center>
-						<input type="submit" value="Post"> <input type="reset"
-							value="Reset">
-						<!-- <p id="demo1"></p>-->
+						<input type="submit" value="Post" >
+						<input type="reset" value="Reset">
 					</center>
 				</form>
 			</div>
