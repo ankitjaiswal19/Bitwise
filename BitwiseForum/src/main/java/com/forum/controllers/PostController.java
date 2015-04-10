@@ -63,7 +63,8 @@ public class PostController {
 		}
     	return modelAndView;
     }
-    @RequestMapping(value="/addpost", method= RequestMethod.POST)
+    @SuppressWarnings("unchecked")
+	@RequestMapping(value="/addpost", method= RequestMethod.POST)
 	public ModelAndView getPostInfo(
 			@RequestParam Map<String, Object> params)
             {
