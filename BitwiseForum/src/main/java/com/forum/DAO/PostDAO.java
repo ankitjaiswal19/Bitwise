@@ -23,6 +23,7 @@ public class PostDAO {
 
 	@Transactional
 	public void addPost(Post post) {
+		//to add post
 		em.persist(post);
 		Collection<Tags> tags= post.getTags();
 		if(tags!=null)
