@@ -74,7 +74,7 @@ public class PostController {
     		 else{
     			 post.setTags(null);
     		 }
-//    		 post.setPostId(id);
+    		 //post.setPostId(id);
     		 post.setTitle((String)params.get("postTitle"));
     		 post.setOwner(userService.findByEmail((String)params.get("email")));
     		 post.setPostText((String)params.get("postText"));
@@ -84,8 +84,8 @@ public class PostController {
     		 ModelAndView model = new ModelAndView("HomePage");
 
     		 
-//    	    	System.out.println("posted");
-    	    	//ModelAndView model=null;
+    		 //System.out.println("posted");
+    	     //ModelAndView model=null;
     			return model;
 		    
             }
