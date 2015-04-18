@@ -18,7 +18,7 @@ public class TestTagService {
 	public void test() {
 
 		Tags tag= new Tags();
-		tag.setTagName("java");
+		tag.setTagName("Javascript");
 		service.addTagsService(tag);
 		
 	}
