@@ -1,70 +1,43 @@
-.postidcss
-{
+
+.postidcss {
     border: 2px solid pink;
     border-radius: 20px;
-    height: 25%;
+    display: inline-block;
+    
+    height: auto;
+    
+    padding: 1%;
     width: 97%;
-    margin-left: 10px;
-    margin-right: 50px;
-    margin-top: 10px;
+}
+.categorycss {
+    margin-left: 20px;
+}
+.quescss {
+    margin-left: 20px;
+}
+.tagcss {
     float: left;
-
-}
-
-.categorycss
-{
     margin-left: 20px;
-
+    width: auto;
 }
-
-.quescss
-{
-    margin-left: 20px;
-    
-
-}
-
-.tagcss
-{
-    margin-left: 20px;
-
-}
-
-.usernamecss
-{
-
-    margin-right: 3%;
+.usernamecss {
     float: right;
+  
+    text-align: center;
     width: 10%;
-    margin-bottom:1% auto;
-    padding-bottom:2%;
+}
+.datecss {
+    float: right;
+    width: 12%;
+}
+.timecss {
+    float: right;
     
-
 }
-
-.datecss
-{
-
-   
-    margin-right: 6% auto;
-    float: right;
-    width: 12%
-
+.PostContainerCss {
+    height: 100%;
+    position: relative;
 }
-
-.timecss{
-     margin-right: 3% auto ;
-    float: right;
-    width: 20%;
-
-}
-.PostContainerCss
-{
-   position: relative;
-   height: 100%;
-}
-#body
-	{
-	height: 100%;
-	}
+#body {
+    height: 100%;
 }

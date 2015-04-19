@@ -36,7 +36,7 @@ public class UserController {
 	@RequestMapping(value="/home",method=RequestMethod.GET)
 	public ModelAndView home_Get()
 	{
-		return new ModelAndView("HomePage");
+		return welcome();
 	}
 	
 	@RequestMapping(value = "/register", method = RequestMethod.GET)
@@ -79,12 +79,13 @@ public class UserController {
 
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public ModelAndView loginPost(@RequestParam Map<String, String> params) {
-		System.out.println("login called");
+		//System.out.println("login called");
 		ModelAndView mav = null;
 		String email = params.get("email");
 		String pass = params.get("password");
 		if (!email.trim().equals("")) {
 			User user = userService.findByEmail(email);
+			System.out.println(user);
 			if (user.getPassword().equals(pass)) {
 				mav = new ModelAndView("userprofile");
 				//System.out.println(postService.findMyPost(user));

@@ -84,7 +84,8 @@
     <div id="post" style="clear: both">                   		
         <label>Post Are:</label>
 		<a href="./createPost?email=${user.getEmail()}" style="margin-left: 75%;">Create Post</a>
-                      	
+                      	<br>
+                      	<br>
         <div id="PostContainer" class="PostContainerCss">
             <div id="post1" class="PostTextC">
             <c:if test="${not empty postList}">
