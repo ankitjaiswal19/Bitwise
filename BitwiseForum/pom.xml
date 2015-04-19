@@ -13,7 +13,11 @@
     </properties>
 	
 	<dependencies>
-		
+		<dependency>
+   <groupId>javax</groupId>
+   <artifactId>javaee-api</artifactId>
+   <version>7.0</version>
+</dependency>
 		<dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-framework-bom</artifactId>
@@ -29,22 +33,22 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
-			<version>3.2.2.RELEASE</version>
+			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
-			<version>3.2.2.RELEASE</version>
+			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
-			<version>3.2.2.RELEASE</version>
+			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
-			<version>3.2.2.RELEASE</version>
+			<version>${spring.version}</version>
 		</dependency>
 		
 		<dependency>
@@ -62,12 +66,12 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>3.2.2.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-tx</artifactId>
-            <version>3.2.2.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
           <dependency>
             <groupId>aopalliance</groupId>

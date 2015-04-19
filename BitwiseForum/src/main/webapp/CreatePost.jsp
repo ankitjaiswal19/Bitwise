@@ -43,14 +43,15 @@
 					<input type="hidden" name="email" value="${user.getEmail()}">
 					<div id="quesd" class="quescss">
 						<label id="queslabel">Question</label> <input id="question"
-							type="text" size="52px" name="postTitle" placeholder="Enter your query ">
+							type="text" size="52px" name="postTitle"
+							placeholder="Enter your query ">
 
 					</div>
 					<br>
 					<div id="tagd" class="tagcss">
 						<label id="tag">Tag</label> <select id="List">
 							<option value=""><h1>Select List</h1>
-							
+
 							</option>
 							<c:if test="${not empty tagsList}">
 								<c:forEach var="tag" items="${tagsList}">
@@ -62,11 +63,11 @@
 							value="delete" onclick="delName()">
 						<table id="nametable" border="1"
 							style="margin-left: 5px; float: right">
-							 <tr>
+							<tr>
 								<th><label> Delete </label></th>
-						        <th><label id="lab"> Name </label></th>
-							</tr> 
-							
+								<th><label id="lab"> Name </label></th>
+							</tr>
+
 						</table>
 						<br> <br> <br>
 					</div>
@@ -92,8 +93,8 @@
 					</div>
 					<br> <br>
 					<center>
-						<input type="submit" value="Post" >
-						<input type="reset" value="Reset">
+						<input type="submit" value="Post"> <input type="reset"
+							value="Reset">
 					</center>
 				</form>
 			</div>
