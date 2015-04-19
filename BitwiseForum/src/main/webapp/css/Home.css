@@ -1,170 +1,121 @@
-.PheadCss
-{
+
+.PheadCss {
     background-image: url("../images/circle.png");
-    height: 235px ;
+    background-position: center center;
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-    /*color: blue;*/
-    /*border: 3px solid #000000;*/
+    background-size: 100% auto;
     font-size: 2em;
+    height: 235px;
     width: 100%;
-    /*margin-left: 0.1%;*/
 }
-.PbodyC
-{
+.PbodyC {
     border: 2px solid pink;
     border-radius: 20px;
     margin: 1% 1% auto;
-    height: 1000px;
     position: absolute;
+    width: 90%;
 }
-.HLeftCss
-{
+.HLeftCss {
     border: 2px solid pink;
     border-radius: 20px;
-    margin: 1% 3% auto;
+    float: left;
+    height: auto;
+    margin: 3%;
     width: 20%;
-    float: left;
-    height: auto;
 }
-.HRightCss
-{
-    width: 70%;
-    float: left;
+.HRightCss {
     border: 2px solid pink;
     border-radius: 20px;
-    margin: 1% 1% auto;
+    float: left;
     height: auto;
-    /*text-align: center;*/
-
+    margin: 3%;
+    width: 67%;
 }
-.HMainCss
-{
-    width: 98%;
+.HMainCss {
     margin-left: 1%;
-
+    width: 95%;
 }
 .menu {
-
-    position: fixed;
-    background-image:url("../images/Untitled.png");
+    align-items: center;
+    background-image: url("../images/Untitled.png");
+    background-position: center center;
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;;
+    background-size: 100% auto;
+    color: #ffffff;
     height: 30px;
     left: 1%;
+    margin-left: 0.5%;
+    position: fixed;
     top: 0;
     width: 97%;
-    align-items: center;
-    margin-left: .5%;
-    color: #ffffff;
-
-
-
-
+    z-index: 2;
 }
-#menuItem1
- {
-     /*float: left;*/
+#menuItem1 {
     float: right;
     margin-right: 20px;
- }
-#menuItem2
-{
+}
+#menuItem2 {
     float: right;
     margin-right: 30px;
 }
-#menuItem3
-{
+#menuItem3 {
+    color: #ffffff;
     float: right;
     margin-right: 50px;
-    color: #ffffff;
 }
-#HomeP{
+#HomeP {
     float: right;
     margin-right: 40px;
 }
-.postidcss
-{
+.postidcss {
     border: 2px solid pink;
     border-radius: 20px;
+    float: left;
     height: 25%;
+    margin-bottom: 3%;
+    margin-left: 3%;
     width: 95%;
+}
+.categorycss {
+    margin-left: 3%;
+}
+.quescss {
+    margin-left: 3%;
+    margin-top: 3%;
+}
+.tagcss {
     float: left;
     margin-left: 3%;
-    margin-bottom: 3%;
-    
-
 }
-.categorycss
-{
-    margin-left: 3%;
-
-}
-
-.quescss
-{
-    margin-left: 3%;
-    margin-top: 3%
-
-}
-.tagcss
-{
-    margin-left: 3%;
-    float: left;
-
-}
-
-.usernamecss
-{
-
-    margin-right: 4% auto;
+.usernamecss {
     float: right;
-    width: 15%;
     margin-bottom: 3%;
-   
-
+    width: 15%;
 }
-
-.datecss
-{
-
-    margin-right: 6% auto;
+.datecss {
     float: right;
     width: 12%;
-
-
 }
-
-.timecss
-{
-    margin-right: 3%;
+.timecss {
     float: right;
+    margin-bottom: 3%;
+    margin-right: 3%;
     width: 30%;
-     margin-bottom: 3%;
-
 }
-#TagCategories
-{
+#TagCategories {
     border: 2px solid pink;
     border-radius: 20px;
-    height: 18%;
-    width: 90%;
     float: left;
+    height: 18%;
+    margin-bottom: 3%;
     margin-left: 10px;
     text-align: center;
-    margin-bottom: 3%;
-    
+    width: 90%;
 }
-#Htitle
-{
+#Htitle {
     color: #ffffff;
     margin-left: 40px;
 }
-#postlist
-{
-    margin-bottom:3% auto;
-    padding-bottom:2%;
-    margin-top: 2% auto;
+#postlist {
+    padding-bottom: 2%;
 }
