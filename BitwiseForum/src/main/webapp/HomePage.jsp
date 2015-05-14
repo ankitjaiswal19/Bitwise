@@ -60,15 +60,18 @@
 		<div id="Hbody" class="PbodyC">
 
 			<div id="HLeft" class="HLeftCss">
-				<br><h4 align="center">Categories</h4>  <br>
-				
+				<br>
+				<h4 align="center">Categories</h4>
+				<br>
+
 				<c:if test="${not empty tagsList}">
-								<c:forEach var="tag" items="${tagsList}">
-			<div id="TagCategories">
-				<a href="">${tag.getTagName()}</a>							
+					<c:forEach var="tag" items="${tagsList}">
+						<div id="TagCategories">
+							<a href="">${tag.getTagName()}</a>
+						</div>
+					</c:forEach>
+				</c:if>
 			</div>
-				</c:forEach>
-							</c:if></div>
 			<div id="HRight" class=" HRightCss">
 				<br> Recent Post <br> <br>
 
@@ -85,33 +88,39 @@
 					</div>
 					<%-- ${postList} --%>
 					<c:if test="${not empty postList}">
-					<c:forEach var="post" items="${postList}">
-					<div id="postid" class="postidcss">
+						<c:forEach var="post" items="${postList}">
+							<div id="postid" class="postidcss">
 
-						<div id="quesd" class="quescss">
-							<label id="queslabel"><a href="">${post.getTitle()}</a></label>
-						</div>
-						<br>
-						<div id="tagd" class="tagcss">
-							<label id="tag">Tag</label>
-						</div>
+								<div id="quesd" class="quescss">
+									<label id="queslabel"><a href="">${post.getTitle()}</a></label>
+								</div>
+								<br>
+								<div id="tagd" class="tagcss">
+									<label id="tag"> <c:if
+											test="${not empty post.getTags()}">
+											<c:forEach var="tag" items="${post.getTags()}">
+													${tag.getTagName() }
+											</c:forEach>
+										</c:if>
+									</label>
+								</div>
 
-						<div id="timed" class="timecss">
-							<label id="timelabel"> ${post.getPostDate() }</label>
-						</div>
+								<div id="timed" class="timecss">
+									<label id="timelabel"> ${post.getPostDate() }</label>
+								</div>
 
 
-						<div id="dated" class="datecss">
-							<label id="datelabel"></label>
-						</div>
+								<div id="dated" class="datecss">
+									<label id="datelabel"></label>
+								</div>
 
-						<div id="usernamed" class="usernamecss">
+								<div id="usernamed" class="usernamecss">
 
-							<label id="username"><a href="">${post.getOwner().getName()}</a></label>
-						</div>
+									<label id="username"><a href="">${post.getOwner().getName()}</a></label>
+								</div>
 
-					</div>
-					</c:forEach>
+							</div>
+						</c:forEach>
 					</c:if>
 				</div>
 
