@@ -12,6 +12,7 @@ import com.forum.entities.Post;
 import com.forum.entities.Reply;
 import com.forum.service.PostService;
 import com.forum.service.ReplyService;
+import com.forum.service.UserService;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:spring.xml")
 public class TestReplyService {
@@ -20,17 +21,26 @@ public class TestReplyService {
 	ReplyService service;
 	@Autowired 
 	PostService postService;
+	@Autowired 
+	UserService userService;
+	
 	@Test
 	public void test() {
-		// Set User Entity
 		Reply reply = new Reply();
-//		reply.setReply_content("This is the reply to the first post");
-//		reply.setReply_by(2);
-//		reply.setReply_date(new Date());
-		Post p=postService.findPost(2);
+		Post p=postService.findPost(10);
+		reply.setReplier(userService.findByEmail("priyanka@gmail.com"));
 		reply.setPost(p);
-		reply.setText("reply on post 2");
+		reply.setText("This is my reply to post id: "+p.getPostId());
+		reply.setReplyDate(new Date());
 		service.addReplyService(reply);
+		
+		Reply reply1 = new Reply();
+		Post p1=postService.findPost(11);
+		reply1.setReplier(userService.findByEmail("amit_pandey@gmail.com"));
+		reply1.setPost(p1);
+		reply1.setText("This is my reply to post id: "+p1.getPostId());
+		reply1.setReplyDate(new Date());
+		service.addReplyService(reply1);
 	}
 
 }
