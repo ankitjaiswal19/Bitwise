@@ -11,10 +11,12 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.forum.entities.Comment;
+import com.forum.entities.Post;
 import com.forum.entities.Reply;
 import com.forum.service.CommentService;
 import com.forum.service.PostService;
 import com.forum.service.ReplyService;
+import com.forum.service.UserService;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:spring.xml")
 public class TestCommentService {
@@ -25,25 +27,35 @@ public class TestCommentService {
 	ReplyService replyService;
 	@Autowired
 	PostService postService;
+	@Autowired 
+	UserService userService;
+	
 	@Test
 	public void test() {
-//		Comment comment = new Comment();
-//		comment.setText("this is a comment");
-//		
-//		comment.setCommentDate(new Date());
-//		commentService.addCommentOnReply(30, comment);
-		//comment.setPost(postService.findPost(27));
-		//service.addComment(comment);
-//		System.out.println(commentService.findByPost(postService.findPost(2)));
-//		
-		List<Reply> listReplies=replyService.findByPost(postService.findPost(2));
-		for (Iterator<Reply> iterator = listReplies.iterator(); iterator.hasNext();) {
-			Reply reply = iterator.next();
-			System.out.println(commentService.findByReply(reply));
+
+		Comment comment= new Comment();
+		Post p=postService.findPost(10);
+		comment.setCommentDate(new Date());
+		comment.setPost(p);
+		comment.setCommenter(userService.findByEmail("priyanka@gmail.com"));
+		comment.setText("This is my comment on post id: "+ p.getPostId());
+		
+		commentService.addCommentOnPost(10,comment);
+		
+		Comment comment1= new Comment();
+		Reply r=replyService.findById(12);
+		comment1.setCommentDate(new Date());
+		comment1.setReply(r);
+		comment1.setCommenter(userService.findByEmail("amit_pandey@gmail.com"));
+		comment1.setText("This is my comment on reply id: "+ r.getR_id());
+		commentService.addCommentOnReply(8, comment1);
+		
+//		List<Reply> listReplies=replyService.findByPost(postService.findPost(2));
+//		for (Iterator<Reply> iterator = listReplies.iterator(); iterator.hasNext();) {
+//			Reply reply = iterator.next();
+//			System.out.println(commentService.findByReply(reply));
 			
-			
-			
-		}
+//		}
 		
 		
 	}
