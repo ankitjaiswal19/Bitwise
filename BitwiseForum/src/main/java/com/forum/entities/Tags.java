@@ -2,8 +2,6 @@ package com.forum.entities;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashSet;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

@@ -1,5 +1,7 @@
 package com.forum.entities;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -10,6 +12,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 
 
@@ -30,18 +34,30 @@ public class Reply {
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name ="Post")
 	private Post post;
+	@ManyToOne(fetch=FetchType.LAZY)
+	private User replier;
+	
+	@Temporal(TemporalType.DATE)
+	private Date replyDate;
 	
 	
-//	@OneToMany(mappedBy="reply")
-//	private Collection<Comment> comments=new HashSet<Comment>();
-//	
-//	public Comment createComment() {
-//		Comment c = new Comment();
-//		c.setReply(this);
-//		comments.add(c);
-//		return c;
-//	}
-	
+	@Override
+	public String toString() {
+		return "Reply [r_id=" + r_id + ", text=" + text + ", post=" + post
+				+ ", replier=" + replier + ", replyDate=" + replyDate + "]";
+	}
+	public Date getReplyDate() {
+		return replyDate;
+	}
+	public void setReplyDate(Date replyDate) {
+		this.replyDate = replyDate;
+	}
+	public User getReplier() {
+		return replier;
+	}
+	public void setReplier(User replier) {
+		this.replier = replier;
+	}
 	public int getR_id() {
 		return r_id;
 	}
@@ -60,6 +76,5 @@ public class Reply {
 	public void setPost(Post post) {
 		this.post = post;
 	}
-	
 	
 }
