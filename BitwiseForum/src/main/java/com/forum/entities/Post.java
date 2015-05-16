@@ -1,14 +1,9 @@
 package com.forum.entities;
 
-import java.sql.Time;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
-import java.util.HashSet;
-
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -45,16 +40,8 @@ public class Post {
 	private Date postDate;
 	
 
-//	@OneToMany(mappedBy = "post")
-//	private Collection<Comment> comments = new HashSet<Comment>();
-//
-//	@OneToMany(mappedBy = "post")
-//	private Collection<Reply> reply = new HashSet<Reply>();
-	
-	
-
 	@ManyToMany(mappedBy="post")
-//	@JoinColumn(name="tags")
+
 	private Collection<Tags> tags =new ArrayList<Tags>();
 	
 	public Post() {
@@ -65,37 +52,6 @@ public class Post {
 		tags.add(t);
 	}
 
-//	public Comment createComment() {
-//		Comment c = new Comment();
-//		c.setPost(this);
-//		comments.add(c);
-//		return c;
-//	}
-//
-//	public Reply createReply() {
-//		Reply r = new Reply();
-//		r.setPost(this);
-//		reply.add(r);
-//		return r;
-//	}
-
-
-
-//	public Collection<Reply> getReply() {
-//		return reply;
-//	}
-//
-//	public void setReply(Collection<Reply> reply) {
-//		this.reply = reply;
-//	}
-//
-//	public Collection<Comment> getComments() {
-//		return comments;
-//	}
-//
-//	public void setComments(Collection<Comment> comments) {
-//		this.comments = comments;
-//	}
 
 	public Collection<Tags> getTags() {
 		return tags;
@@ -153,8 +109,4 @@ public class Post {
 		this.postDate = postDate;
 	}
 	
-//	public void setTagType(Collection<Tags> tagType) {
-//		this.tags=tagType;
-//		
-//	}
 }

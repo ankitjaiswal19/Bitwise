@@ -30,6 +30,7 @@ public class Comment {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int c_id;
 	private String text;
+	
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name ="Post")
 	private Post post;
@@ -37,8 +38,13 @@ public class Comment {
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name ="reply")
 	private Reply reply;
+	
 	@ManyToOne(fetch=FetchType.LAZY)
 	private User commenter;
+	
+	@Temporal(TemporalType.DATE)
+	private Date commentDate;
+	
 	public User getCommenter() {
 		return commenter;
 	}
@@ -51,8 +57,7 @@ public class Comment {
 	public void setCommentDate(Date commentDate) {
 		this.commentDate = commentDate;
 	}
-	@Temporal(TemporalType.DATE)
-	private Date commentDate;
+	
 	
 	public Reply getReply() {
 		return reply;

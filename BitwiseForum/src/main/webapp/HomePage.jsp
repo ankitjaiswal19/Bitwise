@@ -98,6 +98,7 @@
 								<div id="tagd" class="tagcss">
 									<label id="tag"> <c:if
 											test="${not empty post.getTags()}">
+											<span> Tags: </span>
 											<c:forEach var="tag" items="${post.getTags()}">
 													${tag.getTagName() }
 											</c:forEach>
