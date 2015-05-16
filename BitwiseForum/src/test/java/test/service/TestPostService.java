@@ -45,6 +45,33 @@ public class TestPostService {
 		post1.addtag(tagsService.findByName("Javascript"));
 		System.out.println(post1);
 		postService.addPostService(post1);
+		
+		Post post2=new Post();
+		post2.setOwner(userService.findByEmail("sukriti@gmail.com"));
+		post2.setPostDate(new Date());
+		post2.setPostText("Difference between HTML and HTML5");
+		post2.setTitle("HTML vs HTML5");
+		post2.addtag(tagsService.findByName("HTML"));
+		System.out.println(post2);
+		postService.addPostService(post2);
+		
+		Post post3=new Post();
+		post3.setOwner(userService.findByEmail("ankit@gmail.com"));
+		post3.setPostDate(new Date());
+		post3.setPostText("Difference between CSS and CSS3");
+		post3.setTitle("CSS vs CSS3");
+		post3.addtag(tagsService.findByName("CSS"));
+		System.out.println(post3);
+		postService.addPostService(post3);
+		
+		Post post4=new Post();
+		post4.setOwner(userService.findByEmail("ankur@gmail.com"));
+		post4.setPostDate(new Date());
+		post4.setPostText("Does Operator Overloading happen in Java");
+		post4.setTitle("Operator Overloading");
+		post4.addtag(tagsService.findByName("Java"));
+		System.out.println(post4);
+		postService.addPostService(post4);
 	}
 
 }
