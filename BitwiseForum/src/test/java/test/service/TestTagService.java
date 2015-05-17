@@ -33,6 +33,35 @@ public class TestTagService {
 		tag3.setTagName("JUnit");
 		service.addTagsService(tag3);
 		
+		Tags tag4= new Tags();
+		tag4.setTagName("HTML");
+		service.addTagsService(tag4);
+		
+		Tags tag5= new Tags();
+		tag5.setTagName("CSS");
+		service.addTagsService(tag5);
+		
+		Tags tag6= new Tags();
+		tag6.setTagName("SQL");
+		service.addTagsService(tag6);
+		
+		Tags tag7= new Tags();
+		tag7.setTagName("Hibernate");
+		service.addTagsService(tag7);
+		
+		Tags tag8= new Tags();
+		tag8.setTagName("Spring");
+		service.addTagsService(tag8);
+		
+		Tags tag9= new Tags();
+		tag9.setTagName("Struts");
+		service.addTagsService(tag9);
+		
+		Tags tag10= new Tags();
+		tag10.setTagName("MVC Architecture");
+		service.addTagsService(tag10);
+
+		
 	}
 
 }

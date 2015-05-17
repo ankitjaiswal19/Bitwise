@@ -41,6 +41,22 @@ public class TestReplyService {
 		reply1.setText("This is my reply to post id: "+p1.getPostId());
 		reply1.setReplyDate(new Date());
 		service.addReplyService(reply1);
+		
+		Reply reply2 = new Reply();
+		Post p2=postService.findPost(22);
+		reply2.setReplier(userService.findByEmail("ashima@gmail.com"));
+		reply2.setPost(p2);
+		reply2.setText("This is my reply to post id: "+p2.getPostId());
+		reply2.setReplyDate(new Date());
+		service.addReplyService(reply2);
+		
+		Reply reply3 = new Reply();
+		Post p3=postService.findPost(22);
+		reply3.setReplier(userService.findByEmail("manpreet@gmail.com"));
+		reply3.setPost(p3);
+		reply3.setText("This is my reply to post id: "+p3.getPostId());
+		reply3.setReplyDate(new Date());
+		service.addReplyService(reply3);
 	}
 
 }
