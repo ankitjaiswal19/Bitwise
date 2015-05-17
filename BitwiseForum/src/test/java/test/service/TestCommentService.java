@@ -34,22 +34,22 @@ public class TestCommentService {
 	public void test() {
 
 		Comment comment= new Comment();
-		Post p=postService.findPost(10);
+		
 		comment.setCommentDate(new Date());
-		comment.setPost(p);
+		
 		comment.setCommenter(userService.findByEmail("priyanka@gmail.com"));
-		comment.setText("This is my comment on post id: "+ p.getPostId());
+		comment.setText("This is my comment on post id: "+ 41);
 		
-		commentService.addCommentOnPost(10,comment);
+		commentService.addCommentOnPost(41,comment);
 		
-		Comment comment1= new Comment();
-		Reply r=replyService.findById(12);
+		/*Comment comment1= new Comment();
+		Reply r=replyService.findById(117);
 		comment1.setCommentDate(new Date());
 		comment1.setReply(r);
 		comment1.setCommenter(userService.findByEmail("amit_pandey@gmail.com"));
 		comment1.setText("This is my comment on reply id: "+ r.getR_id());
 		commentService.addCommentOnReply(8, comment1);
-		
+		*/
 //		List<Reply> listReplies=replyService.findByPost(postService.findPost(2));
 //		for (Iterator<Reply> iterator = listReplies.iterator(); iterator.hasNext();) {
 //			Reply reply = iterator.next();

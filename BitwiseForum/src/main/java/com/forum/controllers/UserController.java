@@ -27,16 +27,16 @@ public class UserController {
 	@RequestMapping(value="/",method=RequestMethod.GET)
 	public ModelAndView welcome()
 	{
+		return new ModelAndView("redirect:/home");
+	}
+	@RequestMapping(value="/home",method=RequestMethod.GET)
+	public ModelAndView home_Get()
+	{
 		ModelAndView mav=new ModelAndView("HomePage");
 //		mav.addObject("title", "new page");
 		mav.addObject("postList", postService.findAllPost());
 		mav.addObject("tagsList", tagsService.findAllTags());
 		return mav;
-	}
-	@RequestMapping(value="/home",method=RequestMethod.GET)
-	public ModelAndView home_Get()
-	{
-		return welcome();
 	}
 	
 	@RequestMapping(value = "/register", method = RequestMethod.GET)

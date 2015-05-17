@@ -24,11 +24,11 @@ public class CommentService {
 	@Autowired
 	PostService postService;
 	@Transactional(propagation=Propagation.REQUIRES_NEW)
-	public void addCommentOnPost(int id,Comment comment){
+	public void addCommentOnPost(Comment comment){
 		
 		// of user.getBatch > silver
 		//System.out.println("Service Called..");
-		comment.setPost(postService.findPost(id));
+		
 		commentDAO.addComment(comment);
 	}
 	public void addCommentOnReply(int id,Comment comment) {
@@ -36,7 +36,8 @@ public class CommentService {
 		comment.setReply(replyService.findById(id));
 		commentDAO.addComment(comment);
 	}
-	public List<Comment> findByPost(Post post) {
+	public List<Comment> findByPostId(int id) {
+		Post post=postService.findPost(id);
 		return commentDAO.findByPost(post);
 	}
 	public List<Comment> findByReply(Reply reply) {

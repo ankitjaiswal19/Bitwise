@@ -2,6 +2,7 @@ package com.forum.controllers;
 
 import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,9 +12,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.forum.entities.Comment;
 import com.forum.entities.Post;
 import com.forum.entities.Tags;
 import com.forum.entities.User;
+import com.forum.service.CommentService;
 import com.forum.service.PostService;
 import com.forum.service.TagsService;
 import com.forum.service.UserService;
@@ -27,6 +30,9 @@ public class PostController {
     private UserService userService;
     @Autowired
     private TagsService tagsService;
+    @Autowired
+    private CommentService commentService;
+    
 //	@RequestMapping(value="/home", method= RequestMethod.GET)
 //	public ModelAndView openHome()
 //	{
@@ -63,42 +69,21 @@ public class PostController {
 		}
     	return modelAndView;
     }
-    @SuppressWarnings("unchecked")
-	@RequestMapping(value="/addpost", method= RequestMethod.POST)
+    @RequestMapping(value="/addpost", method= RequestMethod.POST)
 	public ModelAndView getPostInfo(
 			@RequestParam Map<String, Object> params)
             {
-    		 Post post= new Post(); 
-    		 if(params.get("tag")!=null)
-    		 post.setTags((Collection<Tags>)params.get("tag"));
-    		 else{
-    			 post.setTags(null);
-    		 }
-    		 //post.setPostId(id);
-    		 post.setTitle((String)params.get("postTitle"));
-    		 post.setOwner(userService.findByEmail((String)params.get("email")));
-    		 post.setPostText((String)params.get("postText"));
-    		 post.setPostDate(new Date());
-    		 System.out.println(post);
-    		 postService.addPostService(post);
-    		 ModelAndView model = new ModelAndView("HomePage");
-
-    		 
-    		 //System.out.println("posted");
-    	     //ModelAndView model=null;
-    			return model;
+    		 return new ModelAndView("redirect:/home");
 		    
             }
     
-    @RequestMapping(value="/ViewpostbyId", method= RequestMethod.POST)
+    @RequestMapping(value="/viewpost", method= RequestMethod.GET)
     public ModelAndView ViewPost(@RequestParam(value="id") int id){
-    	
-    	User user=new User();
-    	user.setUserId(id);
-    	Post post=new Post();
-    	
-    	 ModelAndView model = new ModelAndView("view");
-    	 postService.findPost(user.getUserId());
+    	 ModelAndView model = new ModelAndView("PostDisp");
+    	 List<Comment> postComments=commentService.findByPostId(id);
+    	 model.addObject("postComments",postComments);
+    	 model.addObject("post", postService.findPost(id));	
+    	 //postService.findPost(user.getUserId());
     	  return model;
 		} 
 }

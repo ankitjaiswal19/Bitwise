@@ -92,7 +92,7 @@
 							<div id="postid" class="postidcss">
 
 								<div id="quesd" class="quescss">
-									<label id="queslabel"><a href="">${post.getTitle()}</a></label>
+									<label id="queslabel"><a href="./viewpost?id=${post.getPostId()}">${post.getTitle()}</a></label>
 								</div>
 								<br>
 								<div id="tagd" class="tagcss">
