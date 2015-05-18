@@ -1,5 +1,6 @@
 package com.forum.controllers;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
@@ -71,8 +72,23 @@ public class PostController {
     }
     @RequestMapping(value="/addpost", method= RequestMethod.POST)
 	public ModelAndView getPostInfo(
-			@RequestParam Map<String, Object> params)
+			@RequestParam Map<String, String> params)
             {
+    		String email=(String) params.get("email");
+    		User user= userService.findByEmail(email);
+    		Post post=new Post();
+    		post.setTitle((String)params.get("postTitle"));
+    		post.setOwner(user);
+    		post.setPostDate(new Date());
+    		String tags=(String)params.get("tags");
+    		String tags_array[]=tags.split(",");
+    		for(String tag:tags_array)
+    		{
+    			Tags temp_tag=tagsService.findByName(tag);
+    			post.addtag(temp_tag);
+    		}
+    		post.setPostText((String)params.get("postText"));
+    		postService.addPostService(post);
     		 return new ModelAndView("redirect:/home");
 		    
             }

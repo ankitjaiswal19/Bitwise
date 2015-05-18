@@ -37,10 +37,10 @@ public class TestCommentService {
 		
 		comment.setCommentDate(new Date());
 		
-		comment.setCommenter(userService.findByEmail("priyanka@gmail.com"));
-		comment.setText("This is my comment on post id: "+ 41);
-		
-		commentService.addCommentOnPost(41,comment);
+		comment.setCommenter(userService.findByEmail("mayank@ymail.com"));
+		comment.setText("This is my comment on post id: "+ 22);
+		comment.setPost(postService.findPost(22));
+		commentService.addCommentOnPost(comment);
 		
 		/*Comment comment1= new Comment();
 		Reply r=replyService.findById(117);

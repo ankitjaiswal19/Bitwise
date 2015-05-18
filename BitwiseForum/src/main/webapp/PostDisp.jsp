@@ -60,21 +60,24 @@
 				<div id="Phead" class="PheadCss"></div>
 				<div id="Pbody" style="margin: 20px 50px auto;" class="PbodyC">
 					<div id="Ptitle" class="PtitleCss">
-						<br> <label id="PLable" class="PlableC">Topic</label> <br>
-						<br> <label id="PQues" class="PquesC">${post.getTitle()}
-						</label> <label id="PDate" class="PDateC">${post.getPostDate()}</label> <br>
+						<br> <label id="PLable" class="PlableC">Title: </label><br><br><br>
+						 <label id="PQues" class="PquesC">${post.getTitle()}
+						</label>    
+						&nbsp;&nbsp;<label>By User: ${post.getOwner().getName()} on</label>
+						 <label id="PDate" class="PDateC">${post.getPostDate()}</label> <br>
 					</div>
 					<br>
 					<div id="PostText" class="PostTextC">
-						<div id="Text" class="TextC">
-							<br> <label id="Description" class="postdesc">${post.getPostText() }</label>
-							<br>
+						<div id="Text" class="postdesc" style="height: auto; ">
+							<br><label id="Description">Description:<br>${post.getPostText() }</label>
+							<br><br>
 
 						</div>
+						<br>
 						<c:if test="${not empty postComments}">
 							<c:forEach var="comment" items="${postComments}">
 								<div id="TextComment" class="TextCommentC">
-									<label id="Comment" class="TextComment">${comment.getText()}</label>
+								<label> Comment : </label>	<label id="Comment" class="TextComment">${comment.getText()}</label>
 									<label id="PCDate" class="PDateC">${comment.getCommentDate()}</label>
 								</div>
 							</c:forEach>
@@ -83,15 +86,18 @@
 					<br> <br>
 					<form name="ReplySubmit" action="addreply" class="ReplyFormCss">
 						<br> Reply: <br> <input name="Text" id="PostReplyArea"
-							class="ReplyText" placeholder="Enter Your Text" name="reply">
+							class="ReplyText" placeholder="Enter Your Reply" name="reply">
 						<input type="hidden" name="post_id" value="${post.getPostId()}">
 						<input type="submit" value="Reply" class="btnrply">
-					</form>
+					</form><br><br>
 					<form action="addcmt" class="ReplyFormCss" method="post">
-						<input type="text" name="text" id="TextComm" class="TextCommC"
-							placeholder="Post Comment"> <input type="hidden"
-							name="post_id" value="${post.getPostId()}"> <input
-							type="submit" id="btnComment" class="btnComment" value="Submit">
+					<br><br>
+					Comment:
+					<br>
+						<input type="text" name="text" id="TextComm" class="ReplyText"
+							placeholder="Enter Your Comment"> <input type="hidden"
+							name="post_id" value="${post.getPostId()}"> 
+							<input type="submit" id="btnComment" class="btnrply" value="Comment">
 					</form>
 
 				</div>
