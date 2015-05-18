@@ -36,7 +36,8 @@
 .PDateC
 {
     margin-left: 20px;
-    font-size: 15px;
+    
+    
 }
 .PTimeC
 {
@@ -60,22 +61,32 @@
     margin-left: 120px;
     border: 2px solid pink;
     margin-right: 120px;
-
+	border-radius: 20px;
 
 }
 .ReplyText{
     margin-left: 150px;
-    width: 393px;
-    height: 191px;
+    width: 400px;
+  
+
+}
+.CommentText{
+    margin-left: 150px;
+    width: 400px;
+ 
 
 }
 .TextC
 {
 
 }
-.postdesc
-{
+.postdesc {
+    border: 2px solid pink;
+    border-radius: 20px;
+    height: auto;
     margin-left: 50px;
+    width: 500px;
+    margin-left: 150px;
 }
 .TextComment
 {
