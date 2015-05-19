@@ -28,4 +28,8 @@ public class TagsService {
 	{
 		return tagDAO.findAllTags();
 	}
+	public Tags findById(int id) {
+		
+		return tagDAO.findById(id);
+	}
 }

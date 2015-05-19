@@ -29,4 +29,8 @@ public class TagDAO {
 		TypedQuery<Tags> query=em.createNamedQuery("Tags.findAllTags", Tags.class);
 		return query.getResultList(); 
 	}
+	public Tags findById(int id) {
+		
+		return em.find(Tags.class, id);
+	}
 }
