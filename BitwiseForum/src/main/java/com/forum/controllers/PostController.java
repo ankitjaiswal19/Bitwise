@@ -81,11 +81,14 @@ public class PostController {
     		post.setOwner(user);
     		post.setPostDate(new Date());
     		String tags=(String)params.get("tags");
+    		if(tags!= null)
+    		{
     		String tags_array[]=tags.split(",");
     		for(String tag:tags_array)
     		{
     			Tags temp_tag=tagsService.findByName(tag);
     			post.addtag(temp_tag);
+    		}
     		}
     		post.setPostText((String)params.get("postText"));
     		postService.addPostService(post);

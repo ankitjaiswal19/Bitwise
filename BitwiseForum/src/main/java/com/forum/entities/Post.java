@@ -22,7 +22,7 @@ import javax.persistence.TemporalType;
 	 @NamedQuery(name="Post.Search",
             query="Select e " + "from Post e " + "where e.postText LIKE :search"),
             @NamedQuery(name="allPost",
-            query="Select p from Post p"),
+            query="Select p from Post p order by P.postDate desc"),
             @NamedQuery(name="Post.myPost",
             query="Select p from Post p where p.owner = :ownerId")
 })

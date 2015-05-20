@@ -18,8 +18,13 @@ function AddMoreTag(){
         cb.id="cb"+(i++);
         var td2 = document.createElement("td");
         var lab=document.createElement("label");
+        var input=document.createElement("input");
+        input.type="Hidden";
+        input.value= name.value;
+        input.name= name.value;
         lab.innerHTML=name.value;
         td2.appendChild(lab);
+        td2.appendChild(input);
         td1.appendChild(cb);
         tr.appendChild(td1);
         tr.appendChild(td2);
