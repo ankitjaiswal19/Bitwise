@@ -72,7 +72,8 @@ public class PostController {
     }
     @RequestMapping(value="/addpost", method= RequestMethod.POST)
 	public ModelAndView getPostInfo(
-			@RequestParam Map<String, String> params)
+			@RequestParam Map<String, String> params,
+			@RequestParam(value="tags") String[] tags_array)
             {
     		String email=(String) params.get("email");
     		User user= userService.findByEmail(email);
@@ -80,10 +81,10 @@ public class PostController {
     		post.setTitle((String)params.get("postTitle"));
     		post.setOwner(user);
     		post.setPostDate(new Date());
-    		String tags=(String)params.get("tags");
-    		if(tags!= null)
+    		//String tags=(String)params.get("tags");
+    		if(tags_array!= null)
     		{
-    		String tags_array[]=tags.split(",");
+    		//String tags_array[]=tags.split(",");
     		for(String tag:tags_array)
     		{
     			Tags temp_tag=tagsService.findByName(tag);

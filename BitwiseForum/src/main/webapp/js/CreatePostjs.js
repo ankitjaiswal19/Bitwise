@@ -21,7 +21,7 @@ function AddMoreTag(){
         var input=document.createElement("input");
         input.type="Hidden";
         input.value= name.value;
-        input.name= name.value;
+        input.name= "tags";
         lab.innerHTML=name.value;
         td2.appendChild(lab);
         td2.appendChild(input);
