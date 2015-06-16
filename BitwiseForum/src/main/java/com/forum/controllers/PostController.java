@@ -6,6 +6,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -54,13 +56,23 @@ public class PostController {
 		 return model;
 	    }
 	*/
+    @RequestMapping(value="tags")
+    public ModelAndView tags(@RequestParam int id)
+    {
+    	ModelAndView modelAndView=new ModelAndView("HomePage");
+    	Tags tags=tagsService.findById(id);
+    	modelAndView.addObject("postList", tags.getPost());
+    	modelAndView.addObject("tagsList", tagsService.findAllTags());
+    	return modelAndView;
+    }
 	
     @RequestMapping(value="/createPost",method=RequestMethod.GET)
-    public ModelAndView getCreatePost(@RequestParam(value="email") String email)
+    public ModelAndView getCreatePost(HttpSession session)
     {
     	ModelAndView modelAndView=null;
-    	if(email!=null){
-    	User user=userService.findByEmail(email);
+    	User user=(User) session.getAttribute("user");
+    	
+    	if(user!=null){
     	modelAndView =new ModelAndView("CreatePost");
     	modelAndView.addObject("user", user);
     	modelAndView.addObject("tagsList", tagsService.findAllTags());

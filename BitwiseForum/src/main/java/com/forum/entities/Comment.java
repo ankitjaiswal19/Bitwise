@@ -42,7 +42,7 @@ public class Comment {
 	@ManyToOne(fetch=FetchType.LAZY)
 	private User commenter;
 	
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date commentDate;
 	
 	public User getCommenter() {

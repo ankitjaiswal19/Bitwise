@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -36,23 +37,7 @@
 <body>
 	<div id="PostFor">
 		<div id="ForumHome" class="HMainCss">
-			<div id="MenuBar" class="menu">
-
-
-				<div id="menuItem3">
-					<input type="search" placeholder="Search" id="search">
-				</div>
-				<div id="menuItem1">
-					<a href="signup"> Sign Up</a>
-				</div>
-				<div id="menuItem2">
-					<a href="login">Login</a>
-				</div>
-				<div id="HomeP">
-					<a href="home">Home</a>
-				</div>
-				<div id="Htitle">Bitwise Solution</div>
-			</div>
+			<jsp:include page="Header.jsp"></jsp:include>
 
 			<div id="Hbody" class="PbodyC">
 
@@ -64,7 +49,9 @@
 						 <label id="PQues" class="PquesC">${post.getTitle()}
 						</label>    
 						&nbsp;&nbsp;<label>By User: ${post.getOwner().getName()} on</label>
-						 <label id="PDate" class="PDateC">${post.getPostDate()}</label> <br>
+						 <label id="PDate" class="PDateC">Date: <fmt:formatDate value="${post.getPostDate()}" pattern="dd-MM-yyyy" /> Time: <fmt:formatDate value="${post.getPostDate()}" pattern="HH:mm" />  </label>
+						 
+						  <br>
 					</div>
 					<br>
 					<div id="PostText" class="PostTextC">
@@ -78,7 +65,13 @@
 							<c:forEach var="comment" items="${postComments}">
 								<div id="TextComment" class="TextCommentC">
 								<label> Comment : </label>	<label id="Comment" class="TextComment">${comment.getText()}</label>
-									<label id="PCDate" class="PDateC">${comment.getCommentDate()}</label>
+									<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+									<label id="PCDate" class="PDateC">
+									
+									
+									Date: <fmt:formatDate value="${comment.getCommentDate()}" pattern="dd-MM-yyyy" /> Time: <fmt:formatDate value="${comment.getCommentDate()}" pattern="HH:mm" />
+									
+									</label>
 								</div>
 							</c:forEach>
 						</c:if>

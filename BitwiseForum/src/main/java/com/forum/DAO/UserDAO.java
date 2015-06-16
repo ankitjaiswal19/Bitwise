@@ -22,7 +22,7 @@ public class UserDAO {
 	{
 		em.persist(user);
 	}
-	@Transactional
+	
 	public User findUserByEmail(String email) {
 		TypedQuery<User> ubyname=em.createNamedQuery("User.findByEmail",User.class);
 		ubyname.setParameter("email", email);

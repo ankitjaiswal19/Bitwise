@@ -37,7 +37,7 @@ public class Reply {
 	@ManyToOne(fetch=FetchType.LAZY)
 	private User replier;
 	
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date replyDate;
 	
 	

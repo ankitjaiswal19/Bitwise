@@ -16,25 +16,7 @@
 
 <div class="container">
     <div id="ForumHome" class="HMainCss">
-        <div id="MenuBar" class="menu">
-
-
-            <div id="menuItem3">
-                <input type="search" placeholder="Search" id="search">
-            </div>
-            <div id="menuItem1">
-                <a href="register"> Sign Up</a>
-            </div>
-            <div id="menuItem2">
-                <a href="login">Login</a>
-            </div>
-            <div id="HomeP">
-                <a href="home">Home</a>
-            </div>
-            <div id="Htitle" style="position: fixed; font-size:medium;">
-                Bitwise Solution
-            </div>
-        </div>
+        <jsp:include page="Header.jsp"></jsp:include>
         <div id="Hhead" class="PheadCss">
         </div>
         <div id="content">
@@ -83,7 +65,7 @@
 
     <div id="post" style="clear: both">                   		
         <label>Post Are:</label>
-		<a href="./createPost?email=${user.getEmail()}" style="margin-left: 75%;">Create Post</a>
+		<a href="./createPost"style="margin-left: 75%;">Create Post</a>
                       	<br>
                       	<br>
         <div id="PostContainer" class="PostContainerCss">
@@ -93,14 +75,19 @@
                 <div id="postid" class="postidcss">
                     <div id="quesd" class="quescss">
                         <br>
-                        <label id="queslabel"><a href="">${post.getTitle()}</a></label>
+                        <label id="queslabel"><a href="./viewpost?id=${post.getPostId()}">${post.getTitle()}</a></label>
                         <br>
                     </div>
                     <div id="tagd" class="tagcss">
-                        <br>
-                        <label id="tag">Tag</label>
-                        <br>
-                    </div>
+									<label id="tag"> <c:if
+											test="${not empty post.getTags()}">
+											<span> Tags: </span>
+											<c:forEach var="tag" items="${post.getTags()}">
+													${tag.getTagName() }
+											</c:forEach>
+										</c:if>
+									</label>
+								</div>
                     <div id="timed" class="timecss">
                         <label id="timelabel">${post.getPostDate()}</label>
                     </div>

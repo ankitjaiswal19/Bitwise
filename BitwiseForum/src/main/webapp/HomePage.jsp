@@ -37,23 +37,7 @@
 </head>
 <body>
 	<div id="ForumHome" class="HMainCss">
-		<div id="MenuBar" class="menu">
-
-
-			<div id="menuItem3">
-				<input type="search" placeholder="Search" id="search">
-			</div>
-			<div id="menuItem1">
-				<a href="register"> Sign Up</a>
-			</div>
-			<div id="menuItem2">
-				<a href="login">Login</a>
-			</div>
-			<div id="HomeP">
-				<a href="home">Home</a>
-			</div>
-			<div id="Htitle">Bitwise Solution</div>
-		</div>
+	<jsp:include page="Header.jsp"></jsp:include>
 		<div id="Hhead" class="PheadCss"></div>
 
 
